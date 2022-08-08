@@ -4,8 +4,6 @@
   --green-yellow: #cddc39;
   --pink-light: #efa2b4;
   --cyan-light: #aef1ee;
-  --white-alpha-40: rgba(255, 255, 255, 0.4);
-  --white-alpha-25: rgba(255, 255, 255, 0.25);
   --backdrop-filter-blur: blur(5px);
 }
 
@@ -40,12 +38,3 @@ body::before {
   opacity: 0.12;
 }
 
-.section {
-  background-color: var(--white-alpha-25);
-  border: 1px solid var(--white-alpha-40);
-  min-height: 80%;
-  border-radius: 30px;
-  backdrop-filter: var(--backdrop-filter-blur);
-  display: none;
-  overflow-y: scroll;
-}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material/";
 import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
 import { Update } from "./Buttons/Update";
 import { Delete } from "./Buttons/Delete";
 import { Create } from "./Buttons/Create";
@@ -15,7 +16,12 @@ const Agenda = () => {
 
   return (
     <>
-      <div>
+      <Container maxWidth="md" sx={{
+          backgroundColor: 'rgba(255, 255, 255, 0.25)',
+          border: '1px solid rgba(255, 255, 255, 0.4)',
+          borderRadius: '30px',
+          overflowY: 'scroll',
+      }}>
         <Box
           sx={{
             display: "flex",
@@ -24,7 +30,7 @@ const Agenda = () => {
             mt: 1,
             borderRadius: 15,
           }}
-          className="section"
+          
         >
           <CssBaseline />
           <Box
@@ -39,7 +45,7 @@ const Agenda = () => {
             }}
           >
             <h1 style={{ textShadow: "0 0 3px #aef1ee" }}>
-              Welcom To Agenda List App
+              Welcome To Agenda List App
             </h1>
             <Grid
               container
@@ -48,7 +54,7 @@ const Agenda = () => {
               alignItems="center"
               marginTop="35px"
             >
-              <Create setTab={setTab} />
+              <Create setTab={setTab}/>
               {Tab.map((i) => (
                 <>
                   <Grid
@@ -112,7 +118,7 @@ const Agenda = () => {
             </Grid>
           </Box>
         </Box>
-      </div>
+      </Container>
     </>
   );
 };
